@@ -1,0 +1,12 @@
+<div class="formulario">
+    <h2>Iniciar</h2>
+    <div class="form-group">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" [(ngModel)]="usuario" class="form-control" placeholder="Ingresa tu usuario">
+    </div>
+    <div class="form-group">
+        <label for="contraseña">Senha:</label>
+        <input type="password" id="contraseña" name="contraseña" [(ngModel)]="senha" class="form-control" placeholder="Ingresa tu contraseña">
+    </div>
+    <button (click)="Entrar()" class="btn btn-primary">Entrar</button>
+</div>
