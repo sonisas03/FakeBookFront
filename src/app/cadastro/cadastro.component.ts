@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { RespostaCadastro, UsuarioDto } from '../models';
+import { RespostaCadastro, Usuario } from '../models';
 import { firstValueFrom } from 'rxjs';
 
 @Component({
@@ -11,21 +11,28 @@ import { firstValueFrom } from 'rxjs';
 })
 export class CadastroComponent {
   constructor(private httpclient:HttpClient, private router :Router){}
-    usuario: string = "";
+    nome: string = "";
+    apelido: string = ""; 
+    contato: string = "";
+    
+    usuario1: string = "";
     senha: string = "";
 
     async Cadastrar(){
-      let _usuarioDto:UsuarioDto = new UsuarioDto();
-        _usuarioDto.usuario = this.usuario;
-        _usuarioDto.senha = this.senha;
+      let UsuarioDto:Usuario = new Usuario();
+        UsuarioDto.usuario1 = this.usuario1;
+        UsuarioDto.senha = this.senha;
+        UsuarioDto.nome = this.nome;
+        UsuarioDto.apelido = this.apelido;
+        UsuarioDto.contato = this.contato; 
+       
 
-        let resposta:RespostaCadastro = await firstValueFrom (this.httpclient.post<RespostaCadastro>("http://localhost:5178/FakeBook/cadastro", _usuarioDto))
+        let resposta:RespostaCadastro = await firstValueFrom (this.httpclient.post<RespostaCadastro>("http://localhost:5178/FakeBook/cadastro", UsuarioDto))
+        
           if (resposta._respostacadastro==true){
             alert("Usuario Cadastrado")
             this.router.navigate(["inicio"])
           }
-          if (resposta._respostacadastro==false){
-            alert("Usuario Ja Cadastrado")
-          }
+     
     }
 }

@@ -1,12 +1,35 @@
-<div class="formulario mat-elevation-z4">
-    <h1 class="titulo">Cadastrar</h1>
-    <mat-card class="contenido">
-        <mat-form-field class="form-group">
-            <input matInput type="text" id="usuario" name="usuario" [(ngModel)]="usuario" placeholder="Usuario" (keyup.enter)="Cadastrar()">
-        </mat-form-field>
-        <mat-form-field class="form-group">
-            <input matInput type="password" id="contraseña" name="contraseña" [(ngModel)]="senha" placeholder="Senha" (keyup.enter)="Cadastrar()">
-        </mat-form-field>
-        <button mat-raised-button color="primary" (click)="Cadastrar()">Entrar</button>
-    </mat-card>
-</div>
+<div class="container">
+    
+      <div class="card-content">
+        <span class="card-title">FakeBook</span>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec mauris nec mauris nec mauris nec.
+        </p>
+      </div>
+    
+    <div class="card-content">
+    <div class="formulario">
+        <h1 class="center-align">Cadastro de Usuário</h1>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required [(ngModel)]="nome" (keyup.enter)="Cadastrar()">
+        
+        <label for="apelido">Apelido</label>
+        <input type="text" id="apelido" name="apelido" placeholder="Digite o seu apelido" required [(ngModel)]="apelido" (keyup.enter)="Cadastrar()">
+        
+        <label for="contato">Correio</label>
+        <input type="text" id="contato" name="contato" placeholder="Digite o seu contato" required [(ngModel)]="contato" (keyup.enter)="Cadastrar()">
+        
+        <label for="usuario">Usuário</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Digite o nome de usuário desejado" required [(ngModel)]="usuario1" (keyup.enter)="Cadastrar()">
+        
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="Digite a sua senha" required [(ngModel)]="senha" (keyup.enter)="Cadastrar()">
+        
+     
+          <button type="submit" name="action" (click)="Cadastrar()">Cadastrar</button>
+        
+      </div>
+    </div>
+    </div>
+ 
+  

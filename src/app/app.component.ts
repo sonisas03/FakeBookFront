@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { RespostaInicio, Usuario } from './models';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +10,7 @@ import { Router } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  constructor(private router: Router) { }
-  title = 'FakeBookFront';
-  mostrarBoton: boolean = true;
-  
-  ocultarBoton() {
-    this.router.navigate(["cadastro"])
-    this.mostrarBoton = false;
-}
+  constructor(private httpclient:HttpClient, private router :Router){}
+    
+
 }

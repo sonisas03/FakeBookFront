@@ -1,5 +1,9 @@
-export class UsuarioDto{
-    usuario : string = "";
+export class Usuario{
+    nome: string = "";
+    apelido: string = "";
+    contato: string = "";
+ 
+    usuario1 : string = "";
     senha : string = "";
 }
 export class RespostaCadastro{

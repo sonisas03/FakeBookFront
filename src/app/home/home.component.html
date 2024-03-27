@@ -1,1 +1,21 @@
-<p>home works!</p>
+<div class="container">
+  <div class="card-content"> 
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">FakeBook</h2>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget felis eget mauris suscipit fringilla.</p>
+    </div>
+  </div> 
+</div> 
+
+<div *ngIf="(usuarios$ | async) as usuarios" class="card-content">
+    <div *ngFor="let usuario of usuarios" class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ usuario.nome }} {{ usuario.apelido }}</h5>
+        <p class="card-text">Correio: {{ usuario.contato }}</p>
+        <p class="card-text">Usuário: {{ usuario.usuario1 }}</p>
+        <button (click)="eliminarUsuario(usuario)">Eliminar</button>
+      </div>
+    </div>
+  </div> 
+</div>

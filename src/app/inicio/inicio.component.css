@@ -1,57 +1,65 @@
-
-
-.formulario {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 300px;
+.container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    }
-    
-    .formulario h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
+    height: 100vh;
+
+  }
+  
+  .card {
+    width: 400px; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .card-title {
     font-size: 24px;
     text-align: center;
-    color: #333;
-    }
-    
-    .formulario .form-group {
-    margin-bottom: 15px;
-    width: 100%;
-    }
-    
-    .formulario label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-    width: 100%;
-    text-align: left;
-    }
-    
-    .formulario input[type="text"],
-    .formulario input[type="password"] {
-    width: 100%;
-    padding: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .card-text {
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    }
-    
-    .formulario button {
+    text-align: justify;
+  }
+  
+  .formulario {
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
     width: 100%;
     padding: 10px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #007bff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
     cursor: pointer;
-    }
-    
-    .formulario button:hover {
+  }
+  
+  button:hover {
     background-color: #0056b3;
-    }
+  }
+  

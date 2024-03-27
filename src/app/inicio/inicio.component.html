@@ -1,12 +1,26 @@
-<div class="formulario">
-    <h2>Iniciar</h2>
-    <div class="form-group">
-        <label for="usuario">Usuario:</label>
-        <input type="text" id="usuario" name="usuario" [(ngModel)]="usuario" class="form-control" placeholder="Ingresa tu usuario">
+<div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">FakeBook</h2>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget felis eget mauris suscipit fringilla.</p>
+      </div>
+    </div> 
+    <div class="card">
+      <div class="card-body">
+        <div class="formulario">
+          <h2>Iniciar Sesión</h2>
+          <div class="form-group">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" [(ngModel)]="usuario1" class="form-control" placeholder="Ingresa tu usuario">
+          </div>
+          <div class="form-group">
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña" [(ngModel)]="senha" class="form-control" placeholder="Ingresa tu contraseña">
+          </div>
+          <button (click)="Entrar()" class="btn btn-primary">Entrar</button>
+          <button (click)="Cadastrar()" class="btn btn-primary">Registrarse</button>
+        </div>
+      </div>
     </div>
-    <div class="form-group">
-        <label for="contraseña">Senha:</label>
-        <input type="password" id="contraseña" name="contraseña" [(ngModel)]="senha" class="form-control" placeholder="Ingresa tu contraseña">
-    </div>
-    <button (click)="Entrar()" class="btn btn-primary">Entrar</button>
-</div>
+  </div>
+  

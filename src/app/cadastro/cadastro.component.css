@@ -1,19 +1,66 @@
-.formulario {
-    width: 300px;
-    margin: auto;
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+
+  }
+  
+ /* Estilos para las cards */
+.card {
+    margin-bottom: 20px; /* Espacio entre las cards */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .card-content {
+    padding: 20px; /* Espaciado interno */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  .formulario {
+    margin-top: 20px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-title {
+    font-size: 24px; /* Tamaño de la fuente del título */
+  }
+  
+  /* Estilos para el formulario */
+  input[type="text"],
+  input[type="password"] {
+    border: 1px solid #ccc; /* Borde del input */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    width: 100%; /* Ancho completo */
+    margin-bottom: 15px; /* Espacio inferior */
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #007bff; /* Color del borde al enfocar */
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
     background-color: #007bff;
-    border-radius: 5px;
-}
-
-.titulo {
-    color: #ffffff;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.contenido {
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-}
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .center-align {
+    text-align: center; /* Alineación centrada */
+  }
+  

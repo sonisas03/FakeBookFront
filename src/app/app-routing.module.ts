@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {path: "cadastro", component:CadastroComponent },
   {path:"inicio", component:InicioComponent},
+  {path:"", component:InicioComponent},
   {path: "home", component:HomeComponent}
   
 ];
